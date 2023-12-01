@@ -11,7 +11,11 @@ function App() {
 
   return <div className="App">
     <h1>
-      {favProducts}
+      {favProducts.map((favProduct: any) => (
+        <div key={favProduct.id}>
+          <p>{favProduct.name}</p>
+        </div>
+      ))}{" "}
     </h1>
     <ProductList />
 
